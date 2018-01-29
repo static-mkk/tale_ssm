@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.User">
+	<resultMap type="cn.kkcoder.domain.User" id="userRM">
+	</resultMap>
+	
+	<insert id="insert" parameterType="cn.kkcoder.domain.User" >
+		insert into  t_user 
+		(
+		uid , username , password , email , home_url , screen_name , created , activated , logged , group_name 
+		) 
+		values 
+		(
+		#{uid,jdbcType=INTEGER},
+		#{username,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{home_url,jdbcType=VARCHAR},
+		#{screen_name,jdbcType=VARCHAR},
+		#{created,jdbcType=INTEGER},
+		#{activated,jdbcType=INTEGER},
+		#{logged,jdbcType=INTEGER},
+		#{group_name,jdbcType=VARCHAR},
+		)
+	</insert>
+</mapper>

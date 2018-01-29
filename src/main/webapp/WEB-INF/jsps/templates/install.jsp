@@ -72,10 +72,11 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
                     <h3 class="panel-title">Tale安装向导</h3>
                 </div>
                 <div class="panel-body">
-                    <form id="wizard-validation-form">
-                        <div>
+                    <form id="wizard-validation-form" novalidate="novalidate" action="/initUser.action">
+                    <div role="application" class="wizard clearfix" id="steps-uid-0">
+                        <div class="content clearfix">
                             <h3>网站设置</h3>
-                            <section>
+                     		 <section id="steps-uid-0-p-0" role="tabpanel" aria-labelledby="steps-uid-0-h-0" class="body current" aria-hidden="false">
                                 <div class="form-group clearfix">
                                     <label class="col-md-3 control-label">* 网站名称</label>
                                     <div class="col-md-8">
@@ -119,14 +120,10 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
                                     </div>
                                 </div>
                             </section>
-                            <h3>安装完成</h3>
-                            <section>
-                                <div class="form-group clearfix">
-                                    <div class="col-lg-12 text-center">
-                                        <h3>恭喜你，安装完成！</h3>
-                                    </div>
-                                </div>  
-                            </section>
+                       	 </div>
+                       	 
+                       	 <input type="submit" id="install" value="install" /><!-- 提交 -->
+                        
                         </div>
                     </form>
                 </div>  <!-- End panel-body -->
@@ -135,11 +132,10 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
         </div> <!-- end col -->
 
     </div> <!-- End row -->
-    你已经安装过Tale了，如需重新安装请提前做好备份，并删除根目录下的
-    <mark>install.lock</mark>
-    文件。
 </div>
-<script src="<%=p %>/static/admin/js/base.js"></script>
-<script src="<%=p %>/static/admin/js/install.js"></script>
+
+<%-- <script src="<%=p %>/static/admin/js/base.js"></script> --%>
+<%-- <script src="<%=p %>/static/admin/js/install.js"></script> --%>
+
 </body>
 </html>

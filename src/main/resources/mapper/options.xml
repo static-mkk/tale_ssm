@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.Options">
+	<resultMap type="cn.kkcoder.domain.Options" id="optionRM">
+	</resultMap>
+	
+	<insert id="insert" parameterType="cn.kkcoder.domain.Options" >
+		insert into  t_options 
+		(
+		name , value , description 
+		) 
+		values 
+		(
+		#{name,jdbcType=VARCHAR},
+		#{value,jdbcType=VARCHAR},
+		#{description,jdbcType=VARCHAR},
+		)
+	</insert>
+</mapper>
