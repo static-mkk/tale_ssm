@@ -72,7 +72,7 @@ uri="http://java.sun.com/jsp/jstl/functions" %>
                     <h3 class="panel-title">Tale安装向导</h3>
                 </div>
                 <div class="panel-body">
-                    <form id="wizard-validation-form" novalidate="novalidate" action="/initUser.action">
+                    <form id="wizard-validation-form" novalidate="novalidate" action="<%=p %>/initUser.action">
                     <div role="application" class="wizard clearfix" id="steps-uid-0">
                         <div class="content clearfix">
                             <h3>网站设置</h3>

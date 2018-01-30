@@ -3,12 +3,12 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mapper.User">
+<mapper namespace="mapper.user">
 	<resultMap type="cn.kkcoder.domain.User" id="userRM">
 	</resultMap>
 	
 	<insert id="insert" parameterType="cn.kkcoder.domain.User" >
-		insert into  t_user 
+		insert into  t_users 
 		(
 		uid , username , password , email , home_url , screen_name , created , activated , logged , group_name 
 		) 

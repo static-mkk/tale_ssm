@@ -2,6 +2,8 @@ package cn.kkcoder.dao;
 
 import org.springframework.stereotype.Repository;
 
+import cn.kkcoder.domain.User;
+
 /**
  * 
  * @author static-mkk 
@@ -12,6 +14,6 @@ import org.springframework.stereotype.Repository;
  *
  */
 @Repository
-public interface UserDao<User> extends BaseDao<User>{
+public interface UserDao extends BaseDao<User>{
 
 }

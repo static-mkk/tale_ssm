@@ -3,6 +3,7 @@ package cn.kkcoder.dao.Impl;
 import org.springframework.stereotype.Repository;
 
 import cn.kkcoder.dao.UserDao;
+import cn.kkcoder.domain.User;
 
 /**
  * 
@@ -13,11 +14,11 @@ import cn.kkcoder.dao.UserDao;
  * userDao 实现类 
  */
 @Repository
-public class UserDaoImpl<User> extends BaseDaoImpl<User> implements UserDao<User>{
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	
 	/**构造器里设置命名空间*/
 	public UserDaoImpl(){
-		super.setNs("mapper.User");
+		super.setNs("mapper.user");
 	}
 	
 }
