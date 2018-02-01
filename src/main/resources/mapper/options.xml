@@ -16,7 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(
 		#{name,jdbcType=VARCHAR},
 		#{value,jdbcType=VARCHAR},
-		#{description,jdbcType=VARCHAR},
+		#{description,jdbcType=VARCHAR}
 		)
 	</insert>
 </mapper>

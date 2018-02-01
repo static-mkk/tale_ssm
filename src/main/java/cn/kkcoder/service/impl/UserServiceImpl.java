@@ -1,6 +1,9 @@
 package cn.kkcoder.service.impl;
 
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +30,10 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
 		@Override
 		public void insert(User entity) {
 			userDao.insert(entity);
+		}
+		@Override
+		public List<User> find(Map paraMap) {
+			return userDao.find(paraMap);
 		}
 
 }

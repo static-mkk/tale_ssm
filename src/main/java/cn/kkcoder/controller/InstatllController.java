@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Random;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -77,19 +78,24 @@ public class InstatllController {
 		 */
 		try {
 		User user = new User();
-		
-		user.setUid(222);
+		 int  randomp =  (int)(Math.random() * Short.MAX_VALUE );
+		user.setUid(randomp);
 		user.setUsername(admin_user);
 		user.setPassword(admin_pwd);
 		user.setEmail(admin_email);
 		userService.insert(user);
 		
-//		Options op = new Options();
-//		op.setName(site_title);
-//		op.setValue(site_url);
-//		optionsService.insert(op);
+		Options op = new Options();
+		op.setName(site_title);
+		op.setValue(site_url);
+		optionsService.insert(op);
 		} catch (Exception e) {
 			System.out.println("插入用户信息失败！");
+			e.printStackTrace();
+			try {
+				response.getWriter().printf("注册adminer 失败！");
+			} catch (IOException e1) {
+			}
 			return null;
 		}
 		return "templates/admin/login";

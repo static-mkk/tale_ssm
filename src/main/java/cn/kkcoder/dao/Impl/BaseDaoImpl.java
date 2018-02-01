@@ -58,7 +58,7 @@ public abstract class BaseDaoImpl<T> extends SqlSessionDaoSupport implements Bas
 	@Override
 		public List<T> find(Map paraMap) {
 			// TODO Auto-generated method stub
-			return null;
+			return this.getSqlSession().selectList(ns + ".find", paraMap);
 		}
 	@Override
 	public T get(Serializable id) {
