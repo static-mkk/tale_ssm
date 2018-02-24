@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import cn.kkcoder.domain.User;
 import cn.kkcoder.service.UserService;
@@ -25,12 +26,11 @@ public class adminLoginController {
 		return "templates/admin/login";
 	}
 	
-	@RequestMapping("/admin/login.action")
+	@RequestMapping(value="/admin/login.action",method=RequestMethod.POST)
 	public String adminLogin(String username,String password,HttpServletResponse response){
 		/*
 		 * 用户名验证
 		 */
-		System.out.println("111");
 		Map<String ,Object> map = new HashMap<>();
 		User u = new User();
 		u.setUsername(username);
@@ -45,7 +45,6 @@ public class adminLoginController {
 			}
 			return null;
 		}
-		System.out.println("111");
 		/*
 		 * @time 2.1
 		 * 验证这个  之后在写，把验证相关的内容google 一遍再说。。。
