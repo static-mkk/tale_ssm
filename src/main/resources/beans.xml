@@ -27,7 +27,7 @@
 	
 	
 	<!-- 1. 扫描 service 和   dao  -->
-	<context:component-scan base-package="cn.kkcoder.dao,cn.kkcoder.service" />
+	<context:component-scan base-package="cn.kkcoder.dao,cn.kkcoder.service,cn.kkcoder.domain" />
 	
 	<!-- 2.2 配置数据源      2.1 加载数据库连接池文件   -->
 	<context:property-placeholder location="classpath:jdbc.properties"/>

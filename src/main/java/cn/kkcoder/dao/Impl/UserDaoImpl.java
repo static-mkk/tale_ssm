@@ -24,9 +24,4 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 		super.setNs("mapper.user");
 	}
 	
-	@Override
-	public List<User> find(Map paraMap) {
-		return super.find(paraMap);
-	}
-	
 }

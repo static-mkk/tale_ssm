@@ -30,6 +30,7 @@ public class adminLoginController {
 		/*
 		 * 用户名验证
 		 */
+		System.out.println("111");
 		Map<String ,Object> map = new HashMap<>();
 		User u = new User();
 		u.setUsername(username);
@@ -44,6 +45,7 @@ public class adminLoginController {
 			}
 			return null;
 		}
+		System.out.println("111");
 		/*
 		 * @time 2.1
 		 * 验证这个  之后在写，把验证相关的内容google 一遍再说。。。
@@ -53,6 +55,11 @@ public class adminLoginController {
 //		response.addCookie();
 		
 		return "templates/admin/index";
+	}
+	
+	@RequestMapping("/admin/loginJsp.action")
+	private String adminLoginJsp() {
+		return "templates/admin/login";
 	}
 	
 }

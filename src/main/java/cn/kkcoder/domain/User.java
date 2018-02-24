@@ -1,4 +1,7 @@
 package cn.kkcoder.domain;
+
+import org.springframework.stereotype.Component;
+
 /**
  * 
  * @author static-mkk 
@@ -8,6 +11,7 @@ package cn.kkcoder.domain;
  *  admin 用户  对应表t_user
  *    
  */
+@Component
 public class User {
 
     // user表主键

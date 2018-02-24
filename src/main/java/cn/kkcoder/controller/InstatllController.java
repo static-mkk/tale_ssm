@@ -78,7 +78,7 @@ public class InstatllController {
 		 */
 		try {
 		User user = new User();
-		 int  randomp =  (int)(Math.random() * Short.MAX_VALUE );
+		 int  randomp = (int) (Math.random() * 100000 );
 		user.setUid(randomp);
 		user.setUsername(admin_user);
 		user.setPassword(admin_pwd);

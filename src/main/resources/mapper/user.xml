@@ -7,14 +7,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap type="cn.kkcoder.domain.User" id="userRM">
 	</resultMap>
 	
-	<!--  查询用户数据  -->
-	<select id="find"  resultType="cn.kkcoder.domain.User" parameterMap="params">
-	 	select * from t_Users where 
-	 	username =#{params.username} 
-	 	and
-	 	password =#{params.password}
-	</select>
-	
 	
 	<!-- 插入一条用户数据 -->
 	<insert id="insert" parameterType="cn.kkcoder.domain.User" >
@@ -36,4 +28,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		#{group_name,jdbcType=VARCHAR}
 		)
 	</insert>
+	
+	
+	<!--  查询用户数据  -->
+	<select id="find"  resultType="cn.kkcoder.domain.User" >
+	 	select * from t_Users where 
+	 	username =#{username} 
+	 	and
+	 	password =#{password}
+	</select>
+	
+	
+	
 </mapper>

@@ -2,6 +2,21 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
  <display-name>tale_ssm</display-name>
  
+ 	<!-- 添加编码过滤器 -->
+ 	<filter>
+ 		<filter-name>encoding_set</filter-name>
+ 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+ 		<init-param>
+ 			<param-name>encoding</param-name>	
+ 			<param-value>GBK</param-value>
+		</init-param>
+ 	</filter>
+ 	<filter-mapping>
+ 		<filter-name>encoding_set</filter-name>
+ 		<url-pattern>/*</url-pattern>
+ 	</filter-mapping>
+ 	
+ 
 	<!-- 首先是要   在上下文 中  加载 service  和  dao 包下的 beans -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
