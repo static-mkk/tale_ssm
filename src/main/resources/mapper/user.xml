@@ -31,7 +31,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	
 	<!--  查询用户数据  -->
-	<select id="find"  resultType="cn.kkcoder.domain.User" >
+	<select id="find"  resultType="cn.kkcoder.domain.User" parameterType="java.util.Map" >
 	 	select * from t_Users where 
 	 	username =#{username} 
 	 	and

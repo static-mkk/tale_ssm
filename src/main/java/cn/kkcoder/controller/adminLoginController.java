@@ -26,18 +26,18 @@ public class adminLoginController {
 		return "templates/admin/login";
 	}
 	
+	@SuppressWarnings("null")
 	@RequestMapping(value="/admin/login.action",method=RequestMethod.POST)
 	public String adminLogin(String username,String password,HttpServletResponse response){
 		/*
 		 * 用户名验证
 		 */
 		Map<String ,Object> map = new HashMap<>();
-		User u = new User();
-		u.setUsername(username);
-		u.setPassword(password);
-		map.put("User", u);
-		List<User> listUser =  userService.find(map);
-		if(listUser == null){
+		map.put("username", username);
+		map.put("password", password);
+		
+		List<User> listUser =  userService.find(map);//无用户新，会返回空的list，但不是null
+		if(listUser == null || listUser.size() < 1){
 			try {
 				response.getWriter().println("{\"msg\":\"no\"}");
 			} catch (IOException e) {
